@@ -13,20 +13,19 @@ float sol_2
 float delta = b * b - 4 * a * c
 boolean delta_is_positive = False
 
-check delta > 0 then
+check delta > 0:
     delta_is_positive = True
 
-check (not delta_is_positive) then
+check (not delta_is_positive):
     delta = - delta
 
-check delta_is_positive then
+check delta_is_positive:
     write(f'solutions of {a}x² + {b}x + {c} = 0 are: /
     { (-b + sqrt(delta)) / 2 * a } and {(-b - sqrt(delta)) / 2 * a}')
-else
-    check a > 0 then
-        write(f'solutions of {a}x² + {b}x + {c} = 0 are: /
-        {-b / 2 * a} + i * {sqrt(delta) / 2 * a} and {-b / 2 * a} - i * {sqrt(delta) / 2 * a}')
+else check a > 0:
+    write(f'solutions of {a}x² + {b}x + {c} = 0 are: /
+    {-b / 2 * a} + i * {sqrt(delta) / 2 * a} and {-b / 2 * a} - i * {sqrt(delta) / 2 * a}')
 
-    else 
-        write(f'solutions of {a}x² + {b}x + {c} = 0 are: /
-        {-b / 2 * a} - i * {-sqrt(delta) / 2 * a} and {-b / 2 * a} + i * {-sqrt(delta) / 2 * a}')
+else 
+    write(f'solutions of {a}x² + {b}x + {c} = 0 are: /
+    {-b / 2 * a} - i * {-sqrt(delta) / 2 * a} and {-b / 2 * a} + i * {-sqrt(delta) / 2 * a}')
