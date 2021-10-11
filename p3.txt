@@ -18,4 +18,4 @@ while i < n:
         max = numbers[i]
     i = i + 1
 
-write(max)
+print(max)
