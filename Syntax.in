@@ -1,5 +1,5 @@
 program ::= {decllist | cmpdstmt}
-decllist ::= declaration | declaration ";" decllist
+decllist ::= declaration | declaration decllist
 declaration ::= IDENTIFIER type
 type1 ::= "boolean" | "string" | "int" | "double" | "float"
 arraydecl ::= type1 "[" number "]" IDENTIFIER 
