@@ -1,0 +1,21 @@
+// p3 - prints the maximum of n numbers
+
+int n
+int max
+
+read(n)
+
+int[n] numbers
+
+int i = 0
+while i < n:
+    read(numbers[i])
+    i = i + 1
+
+i = 0
+while i < n:
+    check max < numbers[i] then
+        max = numbers[i]
+    i = i + 1
+
+write(max)
