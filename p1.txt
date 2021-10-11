@@ -1,0 +1,19 @@
+// p1 - prints the maximum of 3 numbers
+
+float a
+float b
+float c
+float max
+max = a
+
+read(a)
+read(b)
+read(b)
+
+check b > max then
+    max = b
+
+check c > max then
+    max = c
+
+write(f'maximum of {a}, {b} and {c} if {max}')
