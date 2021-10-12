@@ -14,7 +14,7 @@ float delta = b * b - 4 * a * c
 boolean delta_is_positive = False
 
 check delta > 0:
-    delta_is_positive = True
+    delta_is_positive = True 
 
 check (not delta_is_positive):
     delta = - delta
@@ -29,3 +29,4 @@ else check a > 0:
 else 
     write(f'solutions of {a}x² + {b}x + {c} = 0 are: /
     {-b / 2 * a} - i * {-sqrt(delta) / 2 * a} and {-b / 2 * a} + i * {-sqrt(delta) / 2 * a}')
+

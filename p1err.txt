@@ -16,4 +16,4 @@ check b >= max://err
 check c > max:
     max = c
 
-write(f'maximum of {a}, {b} and {c} if {max}')
+write(f'maximum of {a}, {b} and {c} if {max}') 
