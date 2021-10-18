@@ -1,8 +1,6 @@
-link to Git Repo: https://github.com/GorbataiCristian/LFTC
-
 I used a binary search tree representation for the symbol tables
 Each time you add a constant/identifier to the tree it is assigned an id,
 if the entity already exists in the tree the id of the existing node is returned, 
 otherwise a new node is created with the id assinged in the initialization and this id is returned.
 I also implemented a delete functionality, not sure if we need it.
-If node cannot be directly deleted we replace it with the lowest node from the right side of the BST.
+If node cannot be directly deleted we replace it with the smallest value node from the right side of the deleted node.
