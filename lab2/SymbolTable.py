@@ -95,18 +95,19 @@ class SymbolTable:
         new_node = SymbolTableNode(key, self.id)
         if self.root is None:
             self.root = new_node
+            return None
         else:
             id = self.root.insert_elem(new_node)
             # if node was inserted
             if id == self.id:   
                 self.id += 1
+            return id
     def delete_val(self, key):
         if self.root is None:
             print('not found')
         else:
             was_root_changed, new_root = self.root.delete_elem(key)
             if was_root_changed:
-                print(1)
                 self.root = new_root
 
 
