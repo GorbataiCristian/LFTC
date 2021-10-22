@@ -1,4 +1,3 @@
-// p1 - prints the maximum of 3 numbers
 
 float a
 float b
@@ -16,4 +15,4 @@ check b > max:
 check c > max:
     max = c
 
-write(f'maximum of {a}, {b} and {c} if {max}')
+write('maximum of', a, b, 'and',c, 'is', max)
