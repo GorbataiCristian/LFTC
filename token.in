@@ -32,8 +32,10 @@ double
 boolean
 True
 False
+not
 class
 check
+else
 loop
 break
 continue
