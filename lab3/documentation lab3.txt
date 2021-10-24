@@ -1,0 +1,8 @@
+"parser.py" contains the parser implementation.
+We use a class named Token to store each token and the row it appears in.
+we use a function to write a list of elememts into a file.
+"chech_tokens_from_file" validates all tokens from a file and if the file is
+lexically correct prints writes the content from PIF, the identifier symbol table and the
+constant symbol table into 3 output files.
+A file is considered lexically corect if all it's tokens either appear in the "token.in" file or
+if they are a valid identifier or constant(integer, rational, string)

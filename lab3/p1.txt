@@ -1,0 +1,18 @@
+
+float a
+float b
+float c
+float max
+max = a
+
+read(a)
+read(b)
+read(b)
+
+check b > max:
+    max = b
+
+check c > max:
+    max = c
+
+write('maximum of', a, b, 'and',c, 'is', max)

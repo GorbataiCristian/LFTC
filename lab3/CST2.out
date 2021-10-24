@@ -1,0 +1,12 @@
+symbol table represented as tree
+inorder traversal:
+
+'+ i *'->6
+'+i *'->8
+'-i *'->7
+'and'->4
+'solutions are :'->2
+'solutions are'->5
+0->1
+2->3
+4->0
