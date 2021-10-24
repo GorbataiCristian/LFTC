@@ -1,0 +1,13 @@
+symbol table represented as tree
+inorder traversal:
+
+a->0
+b->1
+c->2
+delta->5
+delta_is_positive->6
+else->9
+not->7
+sol_1->3
+sol_2->4
+sqrt->8

@@ -1,19 +1,18 @@
-// p1 - prints the maximum of 3 numbers(ERRORS)
 
-float -a    //err
+float -a    
 float b
 float c
-float "max  //err
+float "max  
 max = a
 
 read(a)
 read(b)
 read(c)
 
-check b >= max://err
+check b >= max:
     max = bS
 
 check c > max:
     max = c
 
-write(f'maximum of {a}, {b} and {c} if {max}')
+write('maximum of', a, ',' , b, 'and', c,'is', max)

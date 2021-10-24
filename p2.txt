@@ -1,4 +1,3 @@
-// p2 - prints the solutions for a 2nd order equation
 
 float a
 float b
@@ -20,12 +19,9 @@ check (not delta_is_positive):
     delta = - delta
 
 check delta_is_positive:
-    write(f'solutions of {a}x² + {b}x + {c} = 0 are: /
-    { (-b + sqrt(delta)) / 2 * a } and {(-b - sqrt(delta)) / 2 * a}')
+    write('solutions are:', (- b + sqrt(delta)) / 2 * a, 'and', (- b - sqrt(delta)) / 2 * a)
 else check a > 0:
-    write(f'solutions of {a}x² + {b}x + {c} = 0 are: /
-    {-b / 2 * a} + i * {sqrt(delta) / 2 * a} and {-b / 2 * a} - i * {sqrt(delta) / 2 * a}')
+    write('solutions are', - b / 2 * a} '+ i*', sqrt(delta) / 2 * a, 'and ', - b / 2 * a '-i*',sqrt(delta) / 2 * a)
 
 else 
-    write(f'solutions of {a}x² + {b}x + {c} = 0 are: /
-    {-b / 2 * a} - i * {-sqrt(delta) / 2 * a} and {-b / 2 * a} + i * {-sqrt(delta) / 2 * a}')
+    write('solutions are', - b / 2 * a, '-i*', - sqrt(delta) / 2 * a, 'and', - b / 2 * a '+i*', - sqrt(delta) / 2 * a)

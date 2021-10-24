@@ -1,4 +1,3 @@
-// p3 - prints the maximum of n numbers
 
 int n
 int max
