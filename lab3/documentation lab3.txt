@@ -1,3 +1,5 @@
+link to Git Repo: https://github.com/GorbataiCristian/LFTC
+
 "parser.py" contains the parser implementation.
 We use a class named Token to store each token and the row it appears in.
 we use a function to write a list of elememts into a file.
@@ -6,3 +8,11 @@ lexically correct prints writes the content from PIF, the identifier symbol tabl
 constant symbol table into 3 output files.
 A file is considered lexically corect if all it's tokens either appear in the "token.in" file or
 if they are a valid identifier or constant(integer, rational, string)
+ - IDENTIFIER: any word that starts with a letter or an underscore and is followed by any number of letters, underscores or digits
+ - INTEGER: 0 or any non-zero digit followed by any number of digits preceeded by an optional minus or plus sign
+ - RATIONAL: an INTEGER followed by a '.' (point) succeeded by any number of digits
+ - STRING: any nummber of characters between single quotes (')
+
+PIF is a list containing pairs (token, id) where id=-1 of token is in "token.in" file(not an identifier or constant)
+if the token is an identifier or constant then we do not put the actual token in PIF but a label ("constant" or "identifier").
+ST is a binary search tree with add and delete implemented(if needed), add also returns the id of the newly created or existing element.

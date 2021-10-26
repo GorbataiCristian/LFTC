@@ -80,7 +80,7 @@ def check_tokens_from_file(file_name):
     write_to_file('CST.out', ['symbol table represented as tree\ninorder traversal:\n'] + constant_symbol_tale.inorder_traversal())
     return PIF, identifier_symbol_tale, constant_symbol_tale
 
-PIF, identifier_symbol_tale, constant_symbol_tale = check_tokens_from_file('p2.txt')
+PIF, identifier_symbol_tale, constant_symbol_tale = check_tokens_from_file('p1err.txt')
 
 print(PIF)
 print(identifier_symbol_tale)
