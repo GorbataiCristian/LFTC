@@ -1,0 +1,7 @@
+symbol table represented as tree
+inorder traversal:
+
+a->0
+b->1
+c->2
+max->3
