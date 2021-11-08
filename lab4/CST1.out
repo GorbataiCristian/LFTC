@@ -1,0 +1,6 @@
+symbol table represented as tree
+inorder traversal:
+
+'and'->1
+'is'->2
+'maximum of'->0

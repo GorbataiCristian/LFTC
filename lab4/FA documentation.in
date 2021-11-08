@@ -1,0 +1,11 @@
+Finite Automata: python class that stores a list of transitions, the input state and a list of final states.
+transitions are of form state_1 -> state_2 and have a value.
+FA can be read from a file, the file is contains rows for each transition, 3 elements per row denoting the starting state, ending state and the value of the transition respectively.
+Initinal states have a '>' character succeeding them(concatenated), final states are denoted by '*'.
+Not all states need to have these notation characters before them, it is fine if it appears only once at any point.
+Example:
+>s a 0
+a a 1
+a b 2
+b *b 3
+denotes all strings of form 01*23*
