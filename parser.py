@@ -1,7 +1,7 @@
 import nltk
 import re
 from SymbolTable import SymbolTable
-
+from FA import FiniteAutomata, read_FA_file
 
 class Token:
     def __init__(self, token, line_nr):
@@ -35,7 +35,10 @@ def check_tokens_from_file(file_name):
     rational_regex = '^([1-9]+[0-9]*|0)(\.[0-9]*)+$'
     token_list = []
     line_nr = 1
-
+    FA_integer_file = 'FA_integer.in'
+    FA_identifier_file = 'FA_identifier.in'
+    FA_integer = read_FA_file(FA_integer_file)
+    FA_identifier = read_FA_file(FA_identifier_file)
     with open(file_name) as f:
         for line in f:
             for token in nltk.tokenize.word_tokenize(line):
@@ -48,10 +51,13 @@ def check_tokens_from_file(file_name):
         if re.search('\n'+re.escape(token_list[index].get_token()) + '\n', tokens):
             # check if not identifier or constant
             PIF.append([token_list[index].get_token(), -1])
-        elif re.search(identifier_regex, token_list[index].get_token()):
+
+        # elif re.search(identifier_regex, token_list[index].get_token()):
+        elif FA_identifier.checkSequence(token_list[index].get_token()):
             # check if identifier
             PIF.append(['identifier', identifier_symbol_tale.add(token_list[index].get_token())])
-        elif re.search(integer_regex, token_list[index].get_token()):
+        # elif re.search(integer_regex, token_list[index].get_token()):
+        elif FA_integer.checkSequence(token_list[index].get_token()):
             # check if integer
             PIF.append(['constant', constant_symbol_tale.add(token_list[index].get_token())])
         elif re.search(rational_regex, token_list[index].get_token()):
@@ -75,12 +81,12 @@ def check_tokens_from_file(file_name):
             print('lexical error - invalid token, line:', token_list[index].get_line_nr(), ' ; token:', token_list[index].get_token())
             return None, None, None
     print('lexically correct')
-    write_to_file('PIF.out', PIF)
-    write_to_file('IST.out', ['symbol table represented as tree\ninorder traversal:\n'] + identifier_symbol_tale.inorder_traversal())
-    write_to_file('CST.out', ['symbol table represented as tree\ninorder traversal:\n'] + constant_symbol_tale.inorder_traversal())
+    # write_to_file('PIF.out', PIF)
+    # write_to_file('IST.out', ['symbol table represented as tree\ninorder traversal:\n'] + identifier_symbol_tale.inorder_traversal())
+    # write_to_file('CST.out', ['symbol table represented as tree\ninorder traversal:\n'] + constant_symbol_tale.inorder_traversal())
     return PIF, identifier_symbol_tale, constant_symbol_tale
 
-PIF, identifier_symbol_tale, constant_symbol_tale = check_tokens_from_file('p1err.txt')
+PIF, identifier_symbol_tale, constant_symbol_tale = check_tokens_from_file('p1.txt')
 
 print(PIF)
 print(identifier_symbol_tale)
