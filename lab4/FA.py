@@ -84,7 +84,7 @@ class FiniteAutomata:
             if transition.getStateFrom() not in states:
                 states.append(transition.getStateFrom())
             if transition.getStateTo() not in states:
-                states.append(transition.geStateTo())
+                states.append(transition.getStateTo())
         return states
 
     def getAlphabet(self):
@@ -155,9 +155,35 @@ def read_FA_file(FA_file):
 
     return FiniteAutomata(transitions, initial_state, final_states)
 
+
+def menu_help():
+    print("help : menu")
+    print("1 : set of states")
+    print("2 : alphabet")
+    print("3 : all transitions")
+    print("4 : set of final states")
+    print("exit : quit")
+
+def menu_run(FA):
+    menu_help()
+    while True:
+        cmd = input("insert command>>>")
+        if cmd == '1':
+            print(FA.getStates())
+        elif cmd == '2':
+            print(FA.getAlphabet())
+        elif cmd == '3':
+            print([str(e) for e in FA.getTransitions()])
+        elif cmd == '4':
+            print(FA.getFinalStates())
+        elif cmd == 'help':
+            menu_help()
+        elif cmd == 'exit':
+            return
+
 if __name__ == "__main__":
     FA = read_FA_file(FA_INPUT)
-    print(FA)
-    print(FA.getAlphabet())
-    print(FA.checkSequence('-120'))
+    menu_run(FA)
+
+
 

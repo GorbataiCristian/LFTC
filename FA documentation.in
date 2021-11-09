@@ -9,3 +9,8 @@ a a 1
 a b 2
 b *b 3
 denotes all strings of form 01*23*
+
+letter := "a" | "b" | ... | "z" | "A" | "B" | ... | "Z"
+digit:= "0" | "1" | ... | "9"
+identifier := (letter | "_"){letter | digit | "_"}
+row := [>|*]identifier [>|*]identifier {letter | digit | _}
